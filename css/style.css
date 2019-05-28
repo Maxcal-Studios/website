@@ -149,6 +149,11 @@ nav ul li a:hover::after {
     transform: scaleX(1);
 }
 
+nav ul li a:active::before,
+nav ul li a:active::after {
+    transform: scaleX(1);
+}
+
 @keyframes slideIn {
     from {
 
@@ -160,6 +165,9 @@ nav ul li a:hover::after {
 
 /* Showcase */
 #showcase {
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
     width: 100%;
     height: 100vh;
     position: relative;
@@ -246,6 +254,43 @@ nav ul li a:hover::after {
     to {
         opacity: 1;
     }
+}
+
+/* Services */
+#services {
+    display: block;
+    background: black;
+    position: relative;
+}
+
+#services .container {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,0);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding: 30px;
+    border-radius: 5px;
+    background: black;
+}
+
+#services .box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 0 0px 3px #ccc;
+    padding: 30px;
+    background: #aaa;
+    min-height: 550px;
+    color: crimson;
+}
+
+#services .box h2 {
+
+    font-size: 2.5rem;
+    color: black;
 }
 
 
