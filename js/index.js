@@ -1,3 +1,3 @@
 $(window).scroll(function () {
-    $('nav').toggleClass('scrolled', $(this).scrollTop() > 60);
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
 });

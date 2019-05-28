@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.preload * {
+  animation-play-state: paused !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 html {
     font-size: 10px;
     font-family: 'Titillium Web', sans-serif;
@@ -22,7 +31,7 @@ header {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom,rgba(0,0,0,.8), rgba(0,0,0,.3)),
-                url('https://images.pexels.com/photos/531360/pexels-photo-531360.jpeg?auto=compress&cs=tinysrgb&dpr=2') center  no-repeat;
+                url('https://images.pexels.com/photos/531360/pexels-photo-531360.jpeg?auto=compress&cs=tinysrgb&dpr=2');
     background-size: cover;
 }
 
@@ -53,6 +62,10 @@ nav {
     padding: 1.5rem 3rem;
 }
 
+.scrolled li a {
+    font-weight: bold;
+}
+
 .brand {
     color: inherit;
     font-size: 3rem;
@@ -79,6 +92,10 @@ nav ul li {
     animation: slideIn .5s forwards;
 }
 
+nav .brand {
+    animation-delay: 0s;
+}
+
 nav ul li:nth-child(1) {
     animation-delay: 0s;
 }
@@ -88,11 +105,11 @@ nav ul li:nth-child(2) {
 }
 
 nav ul li:nth-child(3) {
-    animation-delay: .5s;
+    animation-delay: 0.5s;
 }
 
 nav ul li:nth-child(4) {
-    animation-delay: .75s;
+    animation-delay: 0.75s;
 }
 
 nav ul li a {
