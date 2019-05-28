@@ -60,11 +60,7 @@ nav {
 .scrolled {
     background: #aaa;
     color: black;
-    padding: 1.5rem 3rem;
-}
-
-.scrolled li a {
-    font-weight: bold;
+    padding: 1.4rem 3rem;
 }
 
 .brand {
@@ -115,10 +111,15 @@ nav ul li:nth-child(4) {
 
 nav ul li a {
     color: inherit;
+    font-weight: 300;
     padding: 1rem 0;
     margin: 0 3rem;
     position: relative;
     letter-spacing: 2px;
+}
+
+.scrolled li a {
+    font-weight: 400;
 }
 
 nav ul li a:last-child {
