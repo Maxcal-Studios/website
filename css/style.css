@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .preload * {
   animation-play-state: paused !important;
-  transition: none !important;
+  /* transition: none !important;
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
-  -o-transition: none !important;
+  -o-transition: none !important; */
 }
 
 html {
@@ -28,21 +30,15 @@ a {
     color: #eee;
 }
 
-header {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom,rgba(0,0,0,.8), rgba(0,0,0,.3)),
-                url('https://images.pexels.com/photos/531360/pexels-photo-531360.jpeg?auto=compress&cs=tinysrgb&dpr=2');
-    background-size: cover;
-}
-
 .container {
     max-width: 120rem;
     width: 90%;
     margin: 0 auto;
 }
 
+/* Header */
 nav {
+    z-index: 10;
     color: #fff;
     padding: 3rem 3rem;
     position: fixed;
@@ -58,7 +54,7 @@ nav {
 }
 
 .scrolled {
-    background: #aaa;
+    background: #fff;
     color: black;
     padding: 1.4rem 3rem;
 }
@@ -161,3 +157,95 @@ nav ul li a:hover::after {
         transform: translateX(0);
     }
 }
+
+/* Showcase */
+#showcase {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom,rgba(0,0,0,.8), rgba(0,0,0,.3)),
+                url('https://images.pexels.com/photos/531360/pexels-photo-531360.jpeg?auto=compress&cs=tinysrgb&dpr=2');
+    background-size: cover;
+}
+
+.showcase-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.showcase-content h1 {
+    padding: 0;
+    color: #fff;
+    font-size: 8rem;
+    margin: 0 auto;
+    width: 9.7em;
+    border-right: 3px solid rgba(255,255,255, 0.75);
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    animation:  typewriter 1.5s steps(20) 1s 1 normal both,
+                blinkTextCursor 0.5s steps(50) 1.5s normal,
+                blinkTextCursorSlow 1s steps(50) infinite 1.5s normal;
+    animation-delay: 1.25s;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 9.7em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rbga(255,255,255,0.5);
+    }
+    to {
+        border-right-color: transparent
+    }
+}
+
+@keyframes blinkTextCursorSlow {
+    from {
+        border-right-color: rbga(255,255,255,0.5);
+    }
+    to {
+        border-right-color: transparent
+    }
+}
+
+.showcase-content .btn {
+    opacity: 0;
+    font-size: 2rem;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid white;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+    animation:  fadeIn 2s 1 normal both;
+    animation-delay: 2.8s;
+}
+
+.showcase-content .btn:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
